@@ -86,7 +86,9 @@ voltageSensor.setSensitivity(360.0f); // tune to match actual voltage
   
 ## Project photos
 
-> ![Circuit Diagram](meter_circuit.jpg)
+> ![Circuit Diagram](smart_meter.jpg)
+> ![Circuit Diagram](smart_meter1.jpg)
+
 
 ---
 

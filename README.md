@@ -71,7 +71,7 @@ The main functionalities include:
 - Storing cumulative energy usage in EEPROM
   
  ---
-##Calibration Notes
+## Calibration Notes
 
 - ZMPT101B: Adjust sensitivity using the onboard potentiometer until the displayed voltage matches your multimeter reading.
 ```cpp
@@ -90,7 +90,7 @@ voltageSensor.setSensitivity(360.0f); // tune to match actual voltage
 
 ---
 
-##🚀 Future Enhancement
+## 🚀 Future Enhancement
 
 - Add MQTT or Adafruit IO support for multi-device cloud integration
 - Include energy cost estimation based on unit price

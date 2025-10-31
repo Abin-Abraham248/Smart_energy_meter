@@ -1,4 +1,4 @@
-# ⚡ Smart Energy Meter using ESP32, ACS712 & ZMPT101B
+# ⚡ Smart Energy Meter 
 
 A Wi-Fi-enabled Smart Energy Meter that measures **voltage**, **current**, **power**, and **energy consumption** of connected appliances using an **ESP32**, **ACS712**, and **ZMPT101B** sensors.  
 Data is displayed on a 16x2 LCD and synced to the **Blynk IoT platform** for remote monitoring and control.
@@ -69,8 +69,39 @@ The main functionalities include:
 - Displaying data on the LCD
 - Sending data to Blynk via Wi-Fi
 - Storing cumulative energy usage in EEPROM
+  
+ ---
+##Calibration Notes
 
+- ZMPT101B: Adjust sensitivity using the onboard potentiometer until the displayed voltage matches your multimeter reading.
 ```cpp
-float watt = voltage * (mA / 1000.0);
-float kWh = watt / 3600;
-unit += kWh;
+voltageSensor.setSensitivity(360.0f); // tune to match actual voltage
+```
+- ACS712: Use correct mV/A value based on module type:
+   -5A → 185 mV/A
+   -20A → 100 mV/A
+   -30A → 66 mV/A
+
+  ---
+  
+## Project photos
+
+> ![Circuit Diagram](meter_circuit.jpg)
+
+---
+
+##🚀 Future Enhancement
+
+- Add MQTT or Adafruit IO support for multi-device cloud integration
+- Include energy cost estimation based on unit price
+- Add OTA firmware update via Blynk or Wi-Fi
+- Display daily/weekly energy statistics
+- Integrate mobile notifications for overload or power-off alerts
+- Implement multi-channel monitoring for multiple appliances
+
+---
+
+## 🧾 License
+This project is licensed under the [MIT License](LICENSE) — feel free to modify and share.
+
+© 2025 Abin Ab

@@ -104,4 +104,4 @@ voltageSensor.setSensitivity(360.0f); // tune to match actual voltage
 ## 🧾 License
 This project is licensed under the [MIT License](LICENSE) — feel free to modify and share.
 
-© 2025 Abin Ab
+© 2025 Abin Abraham
